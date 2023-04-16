@@ -1,0 +1,41 @@
+.isNotHovered {
+	opacity: 0;
+}
+
+.isHoveredLeft {
+	animation: slideRight 0.3s ease-in-out;
+	transform: scaleX(-1);
+	opacity: 1;
+}
+
+.isHoveredRight {
+	animation: slideLeft 0.3s ease-in-out;
+	opacity: 1;
+}
+
+.disabled {
+	pointer-events: none;
+	opacity: 0.8;
+}
+
+@keyframes slideRight {
+	0% {
+		transform: translateX(-30px) scaleX(-1);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0) scaleX(-1);
+		opacity: 1;
+	}
+}
+
+@keyframes slideLeft {
+	0% {
+		transform: translateX(30px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}

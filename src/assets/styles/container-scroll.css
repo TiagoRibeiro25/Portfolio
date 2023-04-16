@@ -1,0 +1,28 @@
+:root {
+	--primary: rgb(17, 24, 39);
+	--secondary: rgb(44, 52, 65);
+}
+
+.skills-container,
+.projects-container {
+	scrollbar-width: thin;
+	scrollbar-color: var(--secondary) var(--primary);
+}
+
+.skills-container::-webkit-scrollbar,
+.projects-container::-webkit-scrollbar {
+	width: 15px;
+}
+
+.skills-container::-webkit-scrollbar-track,
+.projects-container::-webkit-scrollbar-track {
+	background: var(--primary);
+	border-radius: 5px;
+}
+
+.skills-container::-webkit-scrollbar-thumb,
+.projects-container::-webkit-scrollbar-thumb {
+	background-color: var(--secondary);
+	border-radius: 14px;
+	border: 3px solid var(--primary);
+}
