@@ -22,7 +22,7 @@ export default function NotFound() {
 							<button
 								type="button"
 								className="w-56 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br shadow-lg shadow-blue-800/80 rounded-lg text-sm px-5 py-2.5 text-center font-medium flex flex-row items-center justify-center mt-7"
-								onClick={() => playMainButtonClickSound()}
+								onClick={playMainButtonClickSound}
 							>
 								Return Home
 							</button>

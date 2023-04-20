@@ -83,7 +83,7 @@ export default function Projects() {
 												target="_blank"
 												className="text-white font-semibold bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2"
 												rel="noreferrer"
-												onClick={() => playMainButtonClickSound()}
+												onClick={playMainButtonClickSound}
 											>
 												Live
 											</a>
@@ -94,7 +94,7 @@ export default function Projects() {
 												target="_blank"
 												className="text-white font-semibold bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2"
 												rel="noreferrer"
-												onClick={() => playMainButtonClickSound()}
+												onClick={playMainButtonClickSound}
 											>
 												Github
 											</a>
