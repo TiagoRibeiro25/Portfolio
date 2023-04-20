@@ -4,8 +4,10 @@ import { downloadSvg, downloadedSvg, downloadingSvg } from "./icons";
 
 export default function Resume() {
 	const [iconSvg, setIconSvg] = React.useState<JSX.Element>(downloadSvg);
+	const [downloading, setDownloading] = React.useState(false);
 
 	const downloadResume = async () => {
+		setDownloading(true);
 		setIconSvg(downloadingSvg);
 		playMainButtonClickSound();
 		setTimeout(async () => {
@@ -17,6 +19,7 @@ export default function Resume() {
 			a.download = "resume.pdf";
 			a.click();
 			setIconSvg(downloadedSvg);
+			setDownloading(false);
 		}, 500);
 	};
 
@@ -31,6 +34,7 @@ export default function Resume() {
 						type="button"
 						className="w-56 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br shadow-lg shadow-blue-800/80 rounded-lg text-sm px-5 py-2.5 text-center font-medium flex flex-row items-center justify-center mt-7"
 						onClick={downloadResume}
+						disabled={downloading}
 					>
 						{iconSvg}
 						Download Resume
