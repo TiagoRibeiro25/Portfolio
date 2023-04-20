@@ -1,3 +1,5 @@
+import { ProjectId } from "./types";
+
 export interface HomeLinkProps {
 	name: string;
 	link: string;
@@ -28,7 +30,7 @@ export interface IconsProps {
 }
 
 export interface Project {
-	id: `${string}-${string}-${string}-${string}-${string}`;
+	id: ProjectId;
 	title: string;
 	description: string;
 	techStack: string[];
