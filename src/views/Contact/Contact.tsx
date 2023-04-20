@@ -2,9 +2,9 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import LoadingIcon from "../../components/LoadingIcon/LoadingIcon";
 import ViewHeader from "../../components/ViewHeader/ViewHeader";
+import { playMainButtonClickSound } from "../../utils/playSound";
 import { sendEmail } from "../../utils/sendEmail";
 import { getSessionStorage } from "../../utils/sessionStorage";
-import { playMainButtonClickSound } from "../../utils/playSound";
 
 export default function Contact() {
 	const navigate = useNavigate();
@@ -19,6 +19,7 @@ export default function Contact() {
 
 	const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
+		if (sending) return;
 		playMainButtonClickSound();
 		setSending(true);
 		const result = await sendEmail({ email, message });
@@ -77,9 +78,10 @@ export default function Contact() {
 								<button
 									className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium  rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white text-white"
 									type="submit"
+									disabled={sending}
 								>
 									<span className="relative text-lg px-16 py-1.5 transition-all ease-in duration-75 bg-gray-800 rounded-md group-hover:bg-opacity-0">
-										Send
+										{sending ? "Sending..." : "Send"}
 									</span>
 								</button>
 							</div>
