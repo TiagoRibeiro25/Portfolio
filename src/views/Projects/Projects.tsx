@@ -19,17 +19,17 @@ export default function Projects() {
 	};
 
 	React.useEffect(() => {
-		if (getSessionStorage("showBtns") !== true) navigate("/");
+		if (!getSessionStorage("showBtns")) navigate("/");
 	}, []);
 
 	return (
 		<div className="flex flex-col h-screen">
 			<ViewHeader title="Projects" />
-			<main className="flex-1 flex items-center">
-				<div className="container h-2/3 max-h-96 mx-auto flex md:flex-row flex-col">
-					<div className="md:w-1/4 w-full h-full md:mx-4 rounded-2xl bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 p-1 background-animate">
-						<div className="h-full w-full bg-gray-800 rounded-xl p-3 text-center">
-							<div className="overflow-y-auto h-full projects-container">
+			<main className="flex items-center flex-1">
+				<div className="container flex flex-col mx-auto h-2/3 max-h-96 md:flex-row">
+					<div className="w-full h-full p-1 md:w-1/4 md:mx-4 rounded-2xl bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 background-animate">
+						<div className="w-full h-full p-3 text-center bg-gray-800 rounded-xl">
+							<div className="h-full overflow-y-auto projects-container">
 								{projectsData.map((project) => {
 									return (
 										<h2
@@ -48,20 +48,20 @@ export default function Projects() {
 							</div>
 						</div>
 					</div>
-					<div className="md:w-3/4 w-full h-full md:mx-4 rounded-2xl bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 p-1 background-animate mt-4 md:mt-0">
-						<div className="w-full h-full bg-gray-800 rounded-xl p-4">
-							<div className="w-full h-full flex flex-row">
-								<div className="hidden sm:block w-1/2 h-full">
+					<div className="w-full h-full p-1 mt-4 md:w-3/4 md:mx-4 rounded-2xl bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 background-animate md:mt-0">
+						<div className="w-full h-full p-4 bg-gray-800 rounded-xl">
+							<div className="flex flex-row w-full h-full">
+								<div className="hidden w-1/2 h-full sm:block">
 									<img
 										src={selected.image}
 										alt={selected.title}
 										loading="lazy"
-										className="h-full w-full object-cover rounded-xl"
+										className="object-cover w-full h-full rounded-xl"
 									/>
 								</div>
-								<div className="sm:w-1/2 w-full h-full flex flex-col items-center ml-3">
+								<div className="flex flex-col items-center w-full h-full ml-3 sm:w-1/2">
 									<h2 className="text-2xl font-bold text-center">{selected.title}</h2>
-									<div className="flex flex-row flex-wrap justify-center lg:mt-6 mt-1">
+									<div className="flex flex-row flex-wrap justify-center mt-1 lg:mt-6">
 										{selected.techStack.map((tech) => {
 											return (
 												<span
@@ -73,11 +73,11 @@ export default function Projects() {
 											);
 										})}
 									</div>
-									<div className="flex flex-col items-center lg:mt-6 mt-1">
+									<div className="flex flex-col items-center mt-1 lg:mt-6">
 										<p className="text-base font-normal text-justify">{selected.description}</p>
 									</div>
-									<div className="w-full h-full flex flex-row mt-2 justify-center items-end">
-										<div className="w-full lg:w-1/2 flex flex-col justify-center items-center">
+									<div className="flex flex-row items-end justify-center w-full h-full mt-2">
+										<div className="flex flex-col items-center justify-center w-full lg:w-1/2">
 											<a
 												href={selected.liveDemo}
 												target="_blank"
@@ -88,7 +88,7 @@ export default function Projects() {
 												Live
 											</a>
 										</div>
-										<div className="w-full lg:w-1/2 flex flex-col justify-center items-center">
+										<div className="flex flex-col items-center justify-center w-full lg:w-1/2">
 											<a
 												href={selected.sourceCode}
 												target="_blank"

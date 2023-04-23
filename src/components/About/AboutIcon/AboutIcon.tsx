@@ -20,7 +20,7 @@ export default function AboutIcon(props: IconsProps) {
 			}`}
 			onClick={handleIconClick}
 		>
-			<div className="w-14 h-14 my-2 rounded-full bg-gray-800 flex items-center justify-center background-animate">
+			<div className="flex items-center justify-center my-2 bg-gray-800 rounded-full w-14 h-14 background-animate">
 				{svgContent}
 			</div>
 		</div>

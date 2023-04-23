@@ -4,7 +4,7 @@ export default function LoadingIcon() {
 	return (
 		<svg
 			aria-hidden="true"
-			className="w-8 h-8 mr-2 animate-spin text-gray-600 fill-blue-600"
+			className="w-8 h-8 mr-2 text-gray-600 animate-spin fill-blue-600"
 			viewBox="0 0 100 101"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"

@@ -57,13 +57,13 @@ export default function Home() {
 	}, [showBtns]);
 
 	return (
-		<div className="flex justify-center items-center h-screen">
-			<div className="container sm:mx-0 mx-4 max-w-2xl rounded-2xl bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 p-1 background-animate">
-				<div className="h-full w-full bg-gray-800 rounded-xl p-12">
+		<div className="flex items-center justify-center h-screen">
+			<div className="container max-w-2xl p-1 mx-4 sm:mx-0 rounded-2xl bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 background-animate">
+				<div className="w-full h-full p-12 bg-gray-800 rounded-xl">
 					<header>
 						<h1 className="text-4xl font-bold text-center">
 							Hi, I&rsquo;m{" "}
-							<span className="animate-text bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 bg-clip-text text-transparent text-5xl font-black">
+							<span className="text-5xl font-black text-transparent animate-text bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 bg-clip-text">
 								{name}
 							</span>
 						</h1>

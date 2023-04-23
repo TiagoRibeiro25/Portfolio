@@ -9,7 +9,7 @@ import { getSessionStorage } from "../../utils/sessionStorage";
 export default function Contact() {
 	const navigate = useNavigate();
 	React.useEffect(() => {
-		if (getSessionStorage("showBtns") !== true) navigate("/");
+		if (!getSessionStorage("showBtns")) navigate("/");
 	}, []);
 
 	const [email, setEmail] = React.useState("");
@@ -30,12 +30,12 @@ export default function Contact() {
 	return (
 		<div className="flex flex-col h-screen">
 			<ViewHeader title="Contact" />
-			<main className="flex-1 flex justify-center items-center">
-				<div className="container max-w-3xl mx-2 flex flex-row rounded-2xl bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 p-1 background-animate">
-					<div className="h-full w-full bg-gray-800 rounded-xl p-3">
-						<h2 className="text-2xl text-white font-bold text-center">
+			<main className="flex items-center justify-center flex-1">
+				<div className="container flex flex-row max-w-3xl p-1 mx-2 rounded-2xl bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 background-animate">
+					<div className="w-full h-full p-3 bg-gray-800 rounded-xl">
+						<h2 className="text-2xl font-bold text-center text-white">
 							Let&rsquo;s work together
-							<span className="animate-blink text-3xl text-white font-bold text-center">...</span>
+							<span className="text-3xl font-bold text-center text-white animate-blink">...</span>
 						</h2>
 
 						<form onSubmit={handleFormSubmit} className="mt-6">
@@ -71,10 +71,10 @@ export default function Contact() {
 									onChange={(e) => setMessage(e.target.value)}
 								></textarea>
 							</div>
-							<div className="w-full mt-6 flex justify-center items-center">
-								{sending ? <LoadingIcon /> : <p className="text-sm text-white font-bold">{response}</p>}
+							<div className="flex items-center justify-center w-full mt-6">
+								{sending ? <LoadingIcon /> : <p className="text-sm font-bold text-white">{response}</p>}
 							</div>
-							<div className="w-full mt-6 flex justify-center items-center">
+							<div className="flex items-center justify-center w-full mt-6">
 								<button
 									className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium  rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white text-white"
 									type="submit"

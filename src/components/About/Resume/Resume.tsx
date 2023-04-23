@@ -24,12 +24,12 @@ export default function Resume() {
 	};
 
 	return (
-		<div className="text-white h-full">
-			<div className="flex flex-col h-full items-center">
+		<div className="h-full text-white">
+			<div className="flex flex-col items-center h-full">
 				<header>
 					<h1 className="text-2xl font-bold">Resume</h1>
 				</header>
-				<main className="w-full h-full flex flex-col mb-3 justify-center items-center">
+				<main className="flex flex-col items-center justify-center w-full h-full mb-3">
 					<button
 						type="button"
 						className="w-56 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br shadow-lg shadow-blue-800/80 rounded-lg text-sm px-5 py-2.5 text-center font-medium flex flex-row items-center justify-center mt-7"
@@ -39,7 +39,7 @@ export default function Resume() {
 						{iconSvg}
 						Download Resume
 					</button>
-					<span className="text-sm mt-5 text-gray-500">Last Updated: 16th April 2023</span>
+					<span className="mt-5 text-sm text-gray-500">Last Updated: 16th April 2023</span>
 				</main>
 			</div>
 		</div>

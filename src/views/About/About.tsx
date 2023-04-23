@@ -13,7 +13,7 @@ export default function About() {
 	const navigate = useNavigate();
 
 	React.useEffect(() => {
-		if (getSessionStorage("showBtns") !== true) navigate("/");
+		if (!getSessionStorage("showBtns")) navigate("/");
 	}, []);
 
 	return (

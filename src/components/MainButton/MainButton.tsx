@@ -11,8 +11,8 @@ export default function MainButton(props: MainButtonProps) {
 	};
 
 	return (
-		<div className="w-full flex flex-row justify-center items-center mt-6">
-			<div className="w-1/3 flex justify-end items-center">
+		<div className="flex flex-row items-center justify-center w-full mt-6">
+			<div className="flex items-center justify-end w-1/3">
 				<img
 					src="./imgs/pointing_hand.webp"
 					alt="Pointing hand"
@@ -31,7 +31,7 @@ export default function MainButton(props: MainButtonProps) {
 					{props.name}
 				</button>
 			</div>
-			<div className="w-1/3 flex justify-start items-center">
+			<div className="flex items-center justify-start w-1/3">
 				<img
 					src="./imgs/pointing_hand.webp"
 					alt="Pointing hand"

@@ -3,17 +3,17 @@ import { skillsData } from "./skillsData";
 
 export default function Skills() {
 	return (
-		<div className="text-white h-full">
-			<div className="flex flex-col h-full items-center">
+		<div className="h-full text-white">
+			<div className="flex flex-col items-center h-full">
 				<header>
 					<h1 className="text-2xl font-bold">Skills</h1>
 				</header>
-				<main className="skills-container w-full max-h-80 flex lg:flex-row flex-col lg:my-0 my-3 overflow-y-auto overflow-x-hidden">
+				<main className="flex flex-col w-full my-3 overflow-x-hidden overflow-y-auto skills-container max-h-80 lg:flex-row lg:my-0">
 					{skillsData.map((section) => (
 						<React.Fragment key={section.title}>
-							{<hr className="lg:hidden w-96 mx-auto border-gray-300 border-opacity-50" />}
-							<div className="w-full lg:w-1/4 h-full flex flex-col items-center lg:mb-0 lg:mt-0 mb-3 mt-1 mx-2">
-								<h2 className="text-xl font-bold mb-2">{section.title}</h2>
+							{<hr className="mx-auto border-gray-300 border-opacity-50 lg:hidden w-96" />}
+							<div className="flex flex-col items-center w-full h-full mx-2 mt-1 mb-3 lg:w-1/4 lg:mb-0 lg:mt-0">
+								<h2 className="mb-2 text-xl font-bold">{section.title}</h2>
 								<ul className="max-w-md space-y-1.5 text-white list-disc list-inside">
 									{section.skills.map((skill) => (
 										<li key={skill} className="font-light">
@@ -24,7 +24,7 @@ export default function Skills() {
 							</div>
 						</React.Fragment>
 					))}
-					<hr className="lg:hidden w-96 mx-auto border-gray-300 border-opacity-50" />
+					<hr className="mx-auto border-gray-300 border-opacity-50 lg:hidden w-96" />
 				</main>
 			</div>
 		</div>

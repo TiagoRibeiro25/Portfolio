@@ -6,7 +6,7 @@ import { playPrimaryButtonClickSound } from "../../utils/playSound";
 export default function ViewHeader(props: ViewHeaderProps) {
 	return (
 		<header>
-			<div className="w-full flex flex-row pt-4">
+			<div className="flex flex-row w-full pt-4">
 				<div className="w-1/2 pl-6">
 					<Link to="/" className="inline-flex w-9 h-9">
 						<svg
@@ -15,7 +15,7 @@ export default function ViewHeader(props: ViewHeaderProps) {
 							viewBox="0 0 24 24"
 							strokeWidth={1.8}
 							stroke="currentColor"
-							className="w-9 h-9 cursor-pointer hover:text-cyan-100"
+							className="cursor-pointer w-9 h-9 hover:text-cyan-100"
 							onClick={playPrimaryButtonClickSound}
 						>
 							<path
@@ -26,7 +26,7 @@ export default function ViewHeader(props: ViewHeaderProps) {
 						</svg>
 					</Link>
 				</div>
-				<div className="w-1/2 text-right pr-6">
+				<div className="w-1/2 pr-6 text-right">
 					<h1 className="text-3xl font-bold">{props.title}</h1>
 				</div>
 			</div>

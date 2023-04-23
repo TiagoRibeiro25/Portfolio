@@ -7,8 +7,8 @@ export default function HomeLink(props: HomeLinkProps) {
 	const [isHovered, setIsHovered] = React.useState(false);
 
 	return (
-		<div className="w-full flex flex-row justify-center items-center mt-6">
-			<div className="sm:w-1/3 w-1/4 flex justify-end items-center">
+		<div className="flex flex-row items-center justify-center w-full mt-6">
+			<div className="flex items-center justify-end w-1/4 sm:w-1/3">
 				{!props.isDisabled && (
 					<img
 						src="./imgs/pointing_hand.webp"
@@ -19,7 +19,7 @@ export default function HomeLink(props: HomeLinkProps) {
 					/>
 				)}
 			</div>
-			<div className="sm:w-1/3 w-1/2 text-center">
+			<div className="w-1/2 text-center sm:w-1/3">
 				<Link
 					to={props.link}
 					className={`text-4xl font-bold text-center cursor-pointer hover:text-cyan-100
@@ -32,7 +32,7 @@ export default function HomeLink(props: HomeLinkProps) {
 				</Link>
 			</div>
 
-			<div className="sm:w-1/3 w-1/4 flex justify-start items-center">
+			<div className="flex items-center justify-start w-1/4 sm:w-1/3">
 				{!props.isDisabled && (
 					<img
 						src="./imgs/pointing_hand.webp"
