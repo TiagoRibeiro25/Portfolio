@@ -4,31 +4,9 @@ import HomeLink from "../../components/HomeLink/HomeLink";
 import MainButton from "../../components/MainButton/MainButton";
 import { playBackgroundMusic, stopBackgroundMusic } from "../../utils/playSound";
 import { getSessionStorage, setSessionStorage } from "../../utils/sessionStorage";
+import { buttons } from "./buttons";
 
 export default function Home() {
-	const buttons = [
-		{
-			name: "About",
-			link: "/about",
-			isDisabled: false,
-		},
-		{
-			name: "Projects",
-			link: "/projects",
-			isDisabled: false,
-		},
-		{
-			name: "Contact",
-			link: "/contact",
-			isDisabled: false,
-		},
-		{
-			name: "Settings",
-			link: "/settings",
-			isDisabled: true,
-		},
-	];
-
 	const fullName = "Tiago Ribeiro";
 	const [name, setName] = React.useState("");
 	const [showBtns, setShowBtns] = React.useState(getSessionStorage("showBtns") || false);

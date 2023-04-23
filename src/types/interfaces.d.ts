@@ -1,8 +1,8 @@
-import { AboutOptions, ProjectId } from "./types";
+import { AboutOptions, HomeLinkLinks, HomeLinkName, MainButtonName, ProjectId } from "./types";
 
 export interface HomeLinkProps {
-	name: string;
-	link: string;
+	name: HomeLinkName;
+	link: HomeLinkLinks;
 	isDisabled: boolean;
 }
 
@@ -15,7 +15,7 @@ export interface QuitButtonProps {
 }
 
 export interface MainButtonProps {
-	name: string;
+	name: MainButtonName;
 	onClick: () => void;
 }
 
