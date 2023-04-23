@@ -1,4 +1,4 @@
-import { ProjectId } from "./types";
+import { AboutOptions, ProjectId } from "./types";
 
 export interface HomeLinkProps {
 	name: string;
@@ -24,7 +24,7 @@ export interface ViewHeaderProps {
 }
 
 export interface IconsProps {
-	name: string;
+	name: AboutOptions;
 	isSelected: boolean;
 	onClick: () => void;
 }
