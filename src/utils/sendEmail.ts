@@ -20,7 +20,7 @@ export const sendEmail = async (props: SendEmailProps) => {
 		return { message: "Please enter a valid message", status: 400 };
 	}
 
-	const uri = "https://send-email-rest-api.onrender.com/api/v2/send";
+	const uri = "https://send-email-api.cyclic.app/api/v2/send";
 	const headers = { "Content-Type": "application/json", authorization: import.meta.env.VITE_SEND_EMAIL_AUTH_KEY };
 	const data = {
 		From: props.email,
