@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import "../../assets/styles/background.css";
 import HomeLink from "../../components/HomeLink/HomeLink";
 import MainButton from "../../components/MainButton/MainButton";
@@ -8,8 +8,8 @@ import { buttons } from "./buttons";
 
 export default function Home() {
 	const fullName = "Tiago Ribeiro";
-	const [name, setName] = React.useState("");
-	const [showBtns, setShowBtns] = React.useState(getSessionStorage("showBtns") || false);
+	const [name, setName] = useState("");
+	const [showBtns, setShowBtns] = useState(getSessionStorage("showBtns") || false);
 
 	const handlePlayClick = () => {
 		playBackgroundMusic();
@@ -21,7 +21,7 @@ export default function Home() {
 		setShowBtns(false);
 	};
 
-	React.useEffect(() => {
+	useEffect(() => {
 		let i = 0;
 		const interval = setInterval(() => {
 			setName(fullName.substring(0, i));
@@ -30,7 +30,7 @@ export default function Home() {
 		}, 150);
 	}, []);
 
-	React.useEffect(() => {
+	useEffect(() => {
 		setSessionStorage("showBtns", showBtns);
 	}, [showBtns]);
 
@@ -53,9 +53,9 @@ export default function Home() {
 								{buttons.map((button) => (
 									<HomeLink
 										key={button.name}
-										name={button.name}
-										link={button.link}
 										isDisabled={button.isDisabled}
+										link={button.link}
+										name={button.name}
 									/>
 								))}
 								<MainButton name="Quit" onClick={handleQuitClick} />

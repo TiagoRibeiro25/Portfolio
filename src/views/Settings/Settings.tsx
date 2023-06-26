@@ -1,11 +1,11 @@
-import React from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ViewHeader from "../../components/ViewHeader/ViewHeader";
 
 export default function Settings() {
 	const navigate = useNavigate();
 
-	React.useEffect(() => {
+	useEffect(() => {
 		navigate("/");
 	}, []);
 

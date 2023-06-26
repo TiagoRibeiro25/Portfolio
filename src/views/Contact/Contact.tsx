@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import LoadingIcon from "../../components/LoadingIcon/LoadingIcon";
 import ViewHeader from "../../components/ViewHeader/ViewHeader";
@@ -8,14 +8,14 @@ import { getSessionStorage } from "../../utils/sessionStorage";
 
 export default function Contact() {
 	const navigate = useNavigate();
-	React.useEffect(() => {
+	useEffect(() => {
 		if (!getSessionStorage("showBtns")) navigate("/");
 	}, []);
 
-	const [email, setEmail] = React.useState("");
-	const [message, setMessage] = React.useState("");
-	const [sending, setSending] = React.useState(false);
-	const [response, setResponse] = React.useState("");
+	const [email, setEmail] = useState("");
+	const [message, setMessage] = useState("");
+	const [sending, setSending] = useState(false);
+	const [response, setResponse] = useState("");
 
 	const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
@@ -38,7 +38,7 @@ export default function Contact() {
 							<span className="text-3xl font-bold text-center text-white animate-blink">...</span>
 						</h2>
 
-						<form onSubmit={handleFormSubmit} className="mt-6">
+						<form className="mt-6" onSubmit={handleFormSubmit}>
 							<div className="w-full">
 								<div className="relative">
 									<div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -54,20 +54,20 @@ export default function Contact() {
 										</svg>
 									</div>
 									<input
-										type="email"
-										className=" text-sm rounded-lg block w-full pl-10 p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:outline-none"
+										className="text-sm rounded-lg block w-full pl-10 p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:outline-none"
 										placeholder="Your Email Address"
+										type="email"
 										onChange={(e) => setEmail(e.target.value)}
 									/>
 								</div>
 							</div>
 							<div className="w-full mt-4">
 								<textarea
-									id="message"
-									rows={4}
-									maxLength={500}
 									className="block p-2.5 w-full text-sm rounded-lg border bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:outline-none max-h-60"
+									id="message"
+									maxLength={500}
 									placeholder="Your Message"
+									rows={4}
 									onChange={(e) => setMessage(e.target.value)}
 								></textarea>
 							</div>
@@ -77,8 +77,8 @@ export default function Contact() {
 							<div className="flex items-center justify-center w-full mt-6">
 								<button
 									className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium  rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white text-white"
-									type="submit"
 									disabled={sending}
+									type="submit"
 								>
 									<span className="relative text-lg px-16 py-1.5 transition-all ease-in duration-75 bg-gray-800 rounded-md group-hover:bg-opacity-0">
 										{sending ? "Sending..." : "Send"}

@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import About from "./views/About/About";
 import Contact from "./views/Contact/Contact";
@@ -14,7 +14,7 @@ import "./assets/styles/container-scroll.css";
 import "./assets/styles/index.css";
 
 function App() {
-	React.useEffect(() => {
+	useEffect(() => {
 		window.addEventListener("beforeunload", () => {
 			sessionStorage.clear();
 		});
@@ -24,12 +24,12 @@ function App() {
 		<div className="h-full min-h-screen bg-gradient-to-r from-gray-800 via-gray-900 to-gray-950 background-animate">
 			<Router>
 				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/about" element={<About />} />
-					<Route path="/projects" element={<Projects />} />
-					<Route path="/contact" element={<Contact />} />
-					<Route path="/settings" element={<Settings />} />
-					<Route path="*" element={<NotFound />} />
+					<Route element={<Home />} path="/" />
+					<Route element={<About />} path="/about" />
+					<Route element={<Projects />} path="/projects" />
+					<Route element={<Contact />} path="/contact" />
+					<Route element={<Settings />} path="/settings" />
+					<Route element={<NotFound />} path="*" />
 				</Routes>
 			</Router>
 		</div>

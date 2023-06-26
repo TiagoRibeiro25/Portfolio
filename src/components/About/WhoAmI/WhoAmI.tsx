@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function WhoAmI() {
 	const birthDate = new Date("2002-11-10");
 	const ageInMilliseconds = Date.now() - birthDate.getTime();
@@ -14,10 +12,10 @@ export default function WhoAmI() {
 				<main className="flex flex-col w-full h-full mb-3 lg:flex-row">
 					<div className="flex items-center justify-center w-full py-4 lg:w-1/3 lg:py-0">
 						<img
-							src="./imgs/who_am_I_pic.gif"
-							loading="lazy"
 							alt="Who Am I"
 							className="object-cover w-56 h-56 rounded-full"
+							loading="lazy"
+							src="./imgs/who_am_I_pic.gif"
 						/>
 					</div>
 					<div className="w-full px-3 lg:w-2/3 lg:pt-4">

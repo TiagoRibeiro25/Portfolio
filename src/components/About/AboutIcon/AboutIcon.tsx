@@ -1,4 +1,3 @@
-import React from "react";
 import { IconsProps } from "../../../types/interfaces";
 import { playSecondaryButtonClickSound } from "../../../utils/playSound";
 import { options } from "./options";

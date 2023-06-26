@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ViewHeader from "../../components/ViewHeader/ViewHeader";
 import { playMainButtonClickSound, playSecondaryButtonClickSound } from "../../utils/playSound";
@@ -7,7 +7,7 @@ import { projectsData } from "./projectsData";
 
 export default function Projects() {
 	const navigate = useNavigate();
-	const [selected, setSelected] = React.useState(projectsData[0]);
+	const [selected, setSelected] = useState(projectsData[0]);
 
 	const updateSelected = (id: string) => {
 		if (id === selected.id) return;
@@ -18,7 +18,7 @@ export default function Projects() {
 		}
 	};
 
-	React.useEffect(() => {
+	useEffect(() => {
 		if (!getSessionStorage("showBtns")) navigate("/");
 	}, []);
 
@@ -36,8 +36,8 @@ export default function Projects() {
 											key={project.id}
 											className={`text-2xl cursor-pointer my-3${
 												project.id === selected.id
-													? " animate-text bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 bg-clip-text text-transparent font-black"
-													: " hover:text-cyan-100"
+													? "animate-text bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 bg-clip-text text-transparent font-black"
+													: "hover:text-cyan-100"
 											}`}
 											onClick={() => updateSelected(project.id)}
 										>
@@ -53,10 +53,10 @@ export default function Projects() {
 							<div className="flex flex-row w-full h-full">
 								<div className="hidden w-1/2 h-full sm:block">
 									<img
-										src={selected.image}
 										alt={selected.title}
-										loading="lazy"
 										className="object-cover w-full h-full rounded-xl"
+										loading="lazy"
+										src={selected.image}
 									/>
 								</div>
 								<div className="flex flex-col items-center w-full h-full ml-3 sm:w-1/2">
@@ -79,10 +79,10 @@ export default function Projects() {
 									<div className="flex flex-row items-end justify-center w-full h-full mt-2">
 										<div className="flex flex-col items-center justify-center w-full lg:w-1/2">
 											<a
-												href={selected.liveDemo}
-												target="_blank"
 												className="text-white font-semibold bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2"
+												href={selected.liveDemo}
 												rel="noreferrer"
+												target="_blank"
 												onClick={playMainButtonClickSound}
 											>
 												Live
@@ -90,10 +90,10 @@ export default function Projects() {
 										</div>
 										<div className="flex flex-col items-center justify-center w-full lg:w-1/2">
 											<a
-												href={selected.sourceCode}
-												target="_blank"
 												className="text-white font-semibold bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2"
+												href={selected.sourceCode}
 												rel="noreferrer"
+												target="_blank"
 												onClick={playMainButtonClickSound}
 											>
 												Github

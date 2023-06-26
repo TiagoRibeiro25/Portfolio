@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { playMainButtonClickSound } from "../../utils/playSound";
 
@@ -18,10 +17,10 @@ export default function NotFound() {
 						<p className="text-center text-gray-400">If you are a developer, you should know what to do.</p>
 						<p className="text-center text-gray-400">If you don&rsquo;t, you should probably leave.</p>
 
-						<Link to="/" className="flex items-center justify-center">
+						<Link className="flex items-center justify-center" to="/">
 							<button
-								type="button"
 								className="w-56 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br shadow-lg shadow-blue-800/80 rounded-lg text-sm px-5 py-2.5 text-center font-medium flex flex-row items-center justify-center mt-7"
+								type="button"
 								onClick={playMainButtonClickSound}
 							>
 								Return Home
