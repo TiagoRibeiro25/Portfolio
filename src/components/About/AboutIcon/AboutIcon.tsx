@@ -12,10 +12,10 @@ export default function AboutIcon(props: IconsProps) {
 
 	return (
 		<div
-			className={`scale-110 w-16 h-16 my-5 rounded-full cursor-pointer  flex items-center justify-center${
+			className={`scale-110 w-16 h-16 my-5 rounded-full cursor-pointer  flex items-center justify-center ${
 				props.isSelected
-					? " bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 background-animate"
-					: " bg-gray-800"
+					? "bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 background-animate"
+					: "bg-gray-800"
 			}`}
 			onClick={handleIconClick}
 		>

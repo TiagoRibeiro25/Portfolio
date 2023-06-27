@@ -21,8 +21,9 @@ export default function HomeLink(props: HomeLinkProps) {
 			</div>
 			<div className="w-1/2 text-center sm:w-1/3">
 				<Link
-					className={`text-4xl font-bold text-center cursor-pointer hover:text-cyan-100
-					${props.isDisabled ? " disabled text-gray-400" : ""}`}
+					className={`text-4xl font-bold text-center cursor-pointer hover:text-cyan-100 ${
+						props.isDisabled ? " disabled text-gray-400" : ""
+					}`}
 					to={props.link}
 					onClick={playPrimaryButtonClickSound}
 					onMouseEnter={() => setIsHovered(true)}

@@ -34,7 +34,7 @@ export default function Projects() {
 									return (
 										<h2
 											key={project.id}
-											className={`text-2xl cursor-pointer my-3${
+											className={`text-2xl cursor-pointer my-3 ${
 												project.id === selected.id
 													? "animate-text bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 bg-clip-text text-transparent font-black"
 													: "hover:text-cyan-100"
