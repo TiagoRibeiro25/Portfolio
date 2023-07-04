@@ -1,12 +1,9 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import ViewHeader from "../../components/ViewHeader/ViewHeader";
 import { playMainButtonClickSound, playSecondaryButtonClickSound } from "../../utils/playSound";
-import { getSessionStorage } from "../../utils/sessionStorage";
 import { projectsData } from "./projectsData";
 
 export default function Projects() {
-	const navigate = useNavigate();
 	const [selected, setSelected] = useState(projectsData[0]);
 
 	const updateSelected = (id: string) => {
@@ -18,17 +15,13 @@ export default function Projects() {
 		}
 	};
 
-	useEffect(() => {
-		if (!getSessionStorage("showBtns")) navigate("/");
-	}, []);
-
 	return (
 		<div className="flex flex-col h-screen">
 			<ViewHeader title="Projects" />
 			<main className="flex items-center flex-1">
-				<div className="container flex flex-col mx-auto h-2/3 max-h-96 md:flex-row">
-					<div className="w-full h-full p-1 md:w-1/4 md:mx-4 rounded-2xl bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 background-animate">
-						<div className="w-full h-full p-3 text-center bg-gray-800 rounded-xl">
+				<div className="container flex flex-col mx-auto h-2/3 max-h-96 lg:flex-row">
+					<div className="p-1 lg:w-1/4 lg:mx-4 rounded-2xl bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 background-animate">
+						<div className="p-3 text-center bg-gray-800 rounded-xl">
 							<div className="h-full overflow-y-auto projects-container">
 								{projectsData.map((project) => {
 									return (
@@ -48,7 +41,7 @@ export default function Projects() {
 							</div>
 						</div>
 					</div>
-					<div className="w-full h-full p-1 mt-4 md:w-3/4 md:mx-4 rounded-2xl bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 background-animate md:mt-0">
+					<div className="p-1 mt-4 lg:w-3/4 lg:mx-4 rounded-2xl bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 background-animate lg:mt-0">
 						<div className="w-full h-full p-4 bg-gray-800 rounded-xl">
 							<div className="flex flex-row w-full h-full">
 								<div className="hidden w-1/2 h-full sm:block">
@@ -59,7 +52,7 @@ export default function Projects() {
 										src={selected.image}
 									/>
 								</div>
-								<div className="flex flex-col items-center w-full h-full ml-3 sm:w-1/2">
+								<div className="flex flex-col items-center ml-3 sm:w-1/2">
 									<h2 className="text-2xl font-bold text-center">{selected.title}</h2>
 									<div className="flex flex-row flex-wrap justify-center mt-1 lg:mt-6">
 										{selected.techStack.map((tech) => {

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { clearSessionStorage } from "./utils/sessionStorage";
 import About from "./views/About/About";
 import Contact from "./views/Contact/Contact";
 import Home from "./views/Home/Home";
@@ -16,7 +17,7 @@ import "./assets/styles/index.css";
 function App() {
 	useEffect(() => {
 		window.addEventListener("beforeunload", () => {
-			sessionStorage.clear();
+			clearSessionStorage();
 		});
 	}, []);
 

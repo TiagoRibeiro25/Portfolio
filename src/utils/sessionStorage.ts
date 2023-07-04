@@ -16,3 +16,7 @@ export function removeSessionStorage(key: string) {
 	key = PRE_KEY + key;
 	sessionStorage.removeItem(key);
 }
+
+export function clearSessionStorage() {
+	sessionStorage.clear();
+}

@@ -32,22 +32,22 @@ export default function ViewHeader(props: ViewHeaderProps) {
 				</div>
 			</header>
 
-			<footer className="fixed bottom-0 right-0 z-10 flex flex-row justify-end w-full p-6">
+			<footer className="fixed bottom-0 right-0 z-10 flex flex-row justify-end p-6">
 				<a
-					className="inline-flex mx-6 hover:scale-110 transition-transform duration-150 ease-in-out"
+					className="inline-flex mx-6 transition-transform duration-150 ease-in-out hover:scale-110"
 					href="https://github.com/TiagoRibeiro25"
 					rel="noreferrer"
 					target="_blank"
 				>
-					<i className="fab fa-github scale-150"></i>
+					<i className="scale-150 fab fa-github"></i>
 				</a>
 				<a
-					className="inline-flex hover:scale-110 transition-transform duration-150 ease-in-out"
+					className="inline-flex transition-transform duration-150 ease-in-out hover:scale-110"
 					href="https://www.linkedin.com/in/tiago-ribeiro-85b121220/"
 					rel="noreferrer"
 					target="_blank"
 				>
-					<i className="fab fa-linkedin scale-150"></i>
+					<i className="scale-150 fab fa-linkedin"></i>
 				</a>
 			</footer>
 		</>

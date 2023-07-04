@@ -1,17 +1,10 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import LoadingIcon from "../../components/LoadingIcon/LoadingIcon";
 import ViewHeader from "../../components/ViewHeader/ViewHeader";
 import { playMainButtonClickSound } from "../../utils/playSound";
 import { sendEmail } from "../../utils/sendEmail";
-import { getSessionStorage } from "../../utils/sessionStorage";
 
 export default function Contact() {
-	const navigate = useNavigate();
-	useEffect(() => {
-		if (!getSessionStorage("showBtns")) navigate("/");
-	}, []);
-
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
 	const [sending, setSending] = useState(false);
