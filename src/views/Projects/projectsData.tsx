@@ -22,6 +22,15 @@ export const projectsData: Project[] = [
 	},
 	{
 		id: crypto.randomUUID(),
+		title: "Only Foods (Under Development)",
+		description: "Platform to share thoughts and recipes, make discussions, create and join groups about food",
+		techStack: ["React", "Typescript", "Tailwindcss", "Node.js", "Express", "MongoDB", "JWT", "Prisma", "Socket.io"],
+		image: "./imgs/only-foods-pic.webp",
+		sourceCode: "https://github.com/TiagoRibeiro25/Only-Foods-BE",
+		liveDemo: "https://onlyfoods.netlify.app/",
+	},
+	{
+		id: crypto.randomUUID(),
 		title: "Manage Quotes",
 		description:
 			"A simple web app made with React and TypeScript, with a Node.js (Express) backend. It allows you to create, edit, and delete quotes.",
@@ -58,15 +67,5 @@ export const projectsData: Project[] = [
 		image: "./imgs/junk-king-pic.webp",
 		sourceCode: "https://github.com/pedromst2000/PROJETO-01-Eco-Escolas-CPG",
 		liveDemo: "https://junk-king.netlify.app/",
-	},
-	{
-		id: crypto.randomUUID(),
-		title: "Email REST API",
-		description:
-			"A REST API made with Node.js and Express to send emails through MailJet and store them in a MongoDB database.",
-		techStack: ["Node.js", "Express", "MailJet API", "MongoDB"],
-		image: "./imgs/email-rest-api-pic.webp",
-		sourceCode: "https://github.com/TiagoRibeiro25/Send-Email-REST-API",
-		liveDemo: "https://send-email-rest-api.onrender.com",
 	},
 ];
