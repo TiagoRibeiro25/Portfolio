@@ -21,7 +21,7 @@ export default function Projects() {
 			<main className="flex items-center flex-1">
 				<div className="container flex flex-col mx-auto h-2/3 max-h-96 lg:flex-row">
 					<div className="p-1 lg:w-1/4 lg:mx-4 rounded-2xl bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 background-animate">
-						<div className="p-3 text-center bg-gray-800 rounded-xl">
+						<div className="h-full p-3 text-center bg-gray-800 rounded-xl">
 							<div className="h-full overflow-y-auto projects-container">
 								{projectsData.map((project) => {
 									return (
