@@ -36,8 +36,8 @@ export const projectsData: Project[] = [
 			"Socket.io",
 		],
 		image: "./imgs/only-foods-pic.webp",
-		sourceCode: "https://github.com/TiagoRibeiro25/Only-Foods-BE",
-		liveDemo: "https://onlyfoods.netlify.app/",
+		sourceCode: "https://github.com/TiagoRibeiro25/Only-Foods-docs",
+		liveDemo: "https://onlyfoods.onrender.com/",
 	},
 	{
 		id: crypto.randomUUID(),
