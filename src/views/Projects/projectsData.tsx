@@ -3,6 +3,25 @@ import { Project } from "../../types/interfaces";
 export const projectsData: Project[] = [
 	{
 		id: crypto.randomUUID(),
+		title: "Only Foods",
+		description: "Platform to share thoughts and recipes, make discussions, create and join groups about food",
+		techStack: [
+			"React",
+			"Tailwind",
+			"Typescript",
+			"Express",
+			"Postgresql",
+			"Redis",
+			"MongoDB",
+			"Prisma",
+			"Socket.io",
+		],
+		image: "./imgs/only-foods-pic.webp",
+		sourceCode: "https://github.com/TiagoRibeiro25/Only-Foods-docs",
+		liveDemo: "https://onlyfoods.onrender.com/",
+	},
+	{
+		id: crypto.randomUUID(),
 		title: "Ecoly",
 		description:
 			"A web application that helps schools manage their eco-schools subjects. It allows schools to easily create new activities, schedule meetings, and track progress towards eco-friendly goals.",
@@ -20,25 +39,7 @@ export const projectsData: Project[] = [
 		sourceCode: "https://github.com/TiagoRibeiro25/Portfolio",
 		liveDemo: "https://tiagoribeiro.tech/",
 	},
-	{
-		id: crypto.randomUUID(),
-		title: "Only Foods (Under Development)",
-		description: "Platform to share thoughts and recipes, make discussions, create and join groups about food",
-		techStack: [
-			"React",
-			"Tailwind",
-			"Typescript",
-			"Express",
-			"Postgresql",
-			"Redis",
-			"MongoDB",
-			"Prisma",
-			"Socket.io",
-		],
-		image: "./imgs/only-foods-pic.webp",
-		sourceCode: "https://github.com/TiagoRibeiro25/Only-Foods-docs",
-		liveDemo: "https://onlyfoods.onrender.com/",
-	},
+
 	{
 		id: crypto.randomUUID(),
 		title: "Manage Quotes",
@@ -68,14 +69,5 @@ export const projectsData: Project[] = [
 		image: "./imgs/jumper-pic.webp",
 		sourceCode: "https://github.com/xnm-sdksdk/jumper_CPM",
 		liveDemo: "https://jumper-cpm.netlify.app/",
-	},
-	{
-		id: crypto.randomUUID(),
-		title: "Junk King",
-		description: "A school project made with HTML Canvas and JavaScript.",
-		techStack: ["HTML", "CSS", "JavaScript"],
-		image: "./imgs/junk-king-pic.webp",
-		sourceCode: "https://github.com/pedromst2000/PROJETO-01-Eco-Escolas-CPG",
-		liveDemo: "https://junk-king.netlify.app/",
 	},
 ];
