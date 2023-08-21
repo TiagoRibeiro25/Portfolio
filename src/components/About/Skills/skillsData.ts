@@ -5,7 +5,7 @@ export const skillsData = [
 	},
 	{
 		title: "Backend",
-		skills: ["Node.js", "Express", "MySQL, NoSQL", "JsonWebToken", "WebSockets", "Typescript"],
+		skills: ["Node.js", "Express", "SQL, NoSQL", "Auth", "WebSockets", "Typescript"],
 	},
 	{
 		title: "Tools",
@@ -13,6 +13,6 @@ export const skillsData = [
 	},
 	{
 		title: "Current Learning",
-		skills: ["Next.js", "React Native", "Docker", "Astro", "GraphQL"],
+		skills: ["Docker", "Next.js", "React Native", "GraphQL"],
 	},
 ];
