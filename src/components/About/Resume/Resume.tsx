@@ -39,7 +39,7 @@ export default function Resume() {
 						{iconSvg}
 						Download Resume
 					</button>
-					<span className="mt-5 text-sm text-gray-500">Last Updated: 04th July 2023</span>
+					<span className="mt-5 text-sm text-gray-500">Last Updated: 29th August 2023</span>
 				</main>
 			</div>
 		</div>
