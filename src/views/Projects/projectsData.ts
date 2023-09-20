@@ -3,6 +3,15 @@ import { Project } from "../../types/interfaces";
 export const projectsData: Project[] = [
 	{
 		id: crypto.randomUUID(),
+		title: "Easy Wallet (WIP)",
+		description: "Easy Wallet is a web application that allows you to manage your expenses and incomes.",
+		techStack: ["Vue 3", "Tailwind", "Typescript", "Vite", "Goolang", "Echo"],
+		image: "./imgs/easy-wallet-pic.webp",
+		sourceCode: "https://github.com/TiagoRibeiro25/Easy-Wallet-FE",
+		liveDemo: "https://easywallet2023.netlify.app/",
+	},
+	{
+		id: crypto.randomUUID(),
 		title: "Only Foods",
 		description: "Platform to share thoughts and recipes, make discussions, create and join groups about food",
 		techStack: [
