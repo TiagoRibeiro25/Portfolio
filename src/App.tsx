@@ -11,7 +11,7 @@ import Settings from "./views/Settings/Settings";
 import "./assets/styles/background.css";
 import "./assets/styles/blink.css";
 import "./assets/styles/buttons.css";
-import "./assets/styles/container-scroll.css";
+import "./assets/styles/custom-scroll.css";
 import "./assets/styles/index.css";
 
 function App() {
