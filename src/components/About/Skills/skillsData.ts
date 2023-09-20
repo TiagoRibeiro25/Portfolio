@@ -5,14 +5,14 @@ export const skillsData = [
 	},
 	{
 		title: "Backend",
-		skills: ["Node.js", "Express", "SQL, NoSQL", "Auth", "WebSockets", "Typescript"],
+		skills: ["Node.js", "Typescript", "MySQL, PostgreSQL", "MongoDB, Redis", "Token, Session Auth", "WebSockets"],
 	},
 	{
 		title: "Tools",
-		skills: ["Git", "GitHub", "VS Code", "Postman", "PowerShell", "Git Bash"],
+		skills: ["Git", "GitHub", "VS Code", "Postman", "Docker", "WSL2"],
 	},
 	{
 		title: "Current Learning",
-		skills: ["Docker", "Next.js", "React Native", "GraphQL"],
+		skills: ["Golang", "Next.js", "React Native", "GraphQL"],
 	},
 ];
