@@ -3,23 +3,27 @@
 	--secondary: rgb(44, 52, 65);
 }
 
+body,
 .skills-container,
 .projects-container {
 	scrollbar-width: thin;
 	scrollbar-color: var(--secondary) var(--primary);
 }
 
+body::-webkit-scrollbar,
 .skills-container::-webkit-scrollbar,
 .projects-container::-webkit-scrollbar {
 	width: 15px;
 }
 
+body::-webkit-scrollbar-track,
 .skills-container::-webkit-scrollbar-track,
 .projects-container::-webkit-scrollbar-track {
 	background: var(--primary);
 	border-radius: 5px;
 }
 
+body::-webkit-scrollbar-thumb,
 .skills-container::-webkit-scrollbar-thumb,
 .projects-container::-webkit-scrollbar-thumb {
 	background-color: var(--secondary);
