@@ -27,7 +27,7 @@ export default function Contact() {
 				<div className="container flex flex-row max-w-3xl p-1 mx-2 rounded-2xl bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 background-animate">
 					<div className="w-full h-full p-3 bg-gray-800 rounded-xl">
 						<h2 className="text-2xl font-bold text-center text-white">
-							Let&rsquo;s work together
+							Contact Me
 							<span className="text-3xl font-bold text-center text-white animate-blink">...</span>
 						</h2>
 

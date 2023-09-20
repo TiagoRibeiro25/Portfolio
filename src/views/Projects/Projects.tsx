@@ -18,7 +18,7 @@ export default function Projects() {
 	return (
 		<div className="flex flex-col h-screen">
 			<ViewHeader title="Projects" />
-			<main className="flex items-center flex-1">
+			<main className="flex items-center mx-3 lg:flex-1 lg:mx-0">
 				<div className="container flex flex-col mx-auto h-2/3 max-h-96 lg:flex-row">
 					<div className="p-1 lg:w-1/4 lg:mx-4 rounded-2xl bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 background-animate">
 						<div className="h-full p-3 text-center bg-gray-800 rounded-xl">

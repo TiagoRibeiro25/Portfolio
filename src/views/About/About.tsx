@@ -12,7 +12,7 @@ export default function About() {
 	return (
 		<div className="flex flex-col h-screen">
 			<ViewHeader title="About" />
-			<main className="flex items-center flex-1">
+			<main className="flex items-center mx-3 lg:flex-1 lg:mx-0">
 				<div className="container flex flex-col mx-auto md:flex-row">
 					<div className="flex items-center justify-center space-x-10 md:w-1/6 md:flex-col md:space-x-0">
 						<AboutIcon isSelected={selected === "whoAmI"} name="whoAmI" onClick={() => setSelected("whoAmI")} />
