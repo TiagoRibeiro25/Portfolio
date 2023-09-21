@@ -1,4 +1,6 @@
-export const skillsData = [
+import { SkillGroup } from "../../../types/interfaces";
+
+export const skillsData: SkillGroup[] = [
 	{
 		title: "Frontend",
 		skills: ["HTML, CSS", "Javascript, Typescript", "Bootstrap 5, Tailwind", "Sass", "React", "Vue"],

@@ -29,6 +29,11 @@ export interface IconsProps {
 	onClick: () => void;
 }
 
+export interface SkillGroup {
+	title: string;
+	skills: string[];
+}
+
 export interface Project {
 	id: ProjectId;
 	title: string;
