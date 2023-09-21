@@ -8,7 +8,7 @@ export default function Skills() {
 				<header>
 					<h1 className="text-2xl font-bold">Skills</h1>
 				</header>
-				<main className="flex flex-col w-full my-3 overflow-x-hidden overflow-y-auto skills-container max-h-80 lg:flex-row lg:my-0">
+				<main className="flex flex-col w-full my-3 overflow-x-hidden overflow-y-auto skills-container lg:max-h-80 max-h-96 lg:flex-row lg:my-0">
 					{skillsData.map((section) => (
 						<Fragment key={section.title}>
 							{<hr className="mx-auto border-gray-300 border-opacity-50 lg:hidden w-96" />}
