@@ -7,7 +7,7 @@ export const skillsData: SkillGroup[] = [
 	},
 	{
 		title: "Backend",
-		skills: ["Node.js", "Typescript", "MySQL, PostgreSQL", "MongoDB, Redis", "Token, Session Auth", "WebSockets"],
+		skills: ["Node.js, Golang", "Typescript", "MySQL, PostgreSQL", "MongoDB, Redis", "Token, Session Auth", "WebSockets"],
 	},
 	{
 		title: "Tools",
@@ -15,6 +15,6 @@ export const skillsData: SkillGroup[] = [
 	},
 	{
 		title: "Current Learning",
-		skills: ["Golang", "Next.js", "React Native", "GraphQL"],
+		skills: ["Next.js", "React Native", "GraphQL", "Rust"],
 	},
 ];
