@@ -8,7 +8,7 @@ export const projectsData: Project[] = [
 		techStack: ["Vue 3", "Tailwind", "Typescript", "Vite", "Goolang", "Echo"],
 		image: "./imgs/easy-wallet-pic.webp",
 		sourceCode: "https://github.com/TiagoRibeiro25/Easy-Wallet-FE",
-		liveDemo: "https://easywallet2023.netlify.app/",
+		liveDemo: "https://easy-wallet-fe.onrender.com/",
 	},
 	{
 		id: crypto.randomUUID(),
