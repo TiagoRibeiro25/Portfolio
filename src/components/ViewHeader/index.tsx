@@ -43,7 +43,7 @@ export default function ViewHeader(props: ViewHeaderProps) {
 				</a>
 				<a
 					className="inline-flex transition-transform duration-150 ease-in-out hover:scale-110"
-					href="https://www.linkedin.com/in/tiago-ribeiro-85b121220/"
+					href="https://www.linkedin.com/in/tiago-ds-ribeiro/"
 					rel="noreferrer"
 					target="_blank"
 				>
