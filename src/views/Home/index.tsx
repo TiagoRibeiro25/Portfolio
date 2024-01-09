@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import "../../assets/styles/background.css";
-import HomeLink from "../../components/HomeLink/HomeLink";
-import MainButton from "../../components/MainButton/MainButton";
+import HomeLink from "../../components/HomeLink";
+import MainButton from "../../components/MainButton";
 import { playBackgroundMusic, stopBackgroundMusic } from "../../utils/playSound";
 import { getSessionStorage, setSessionStorage } from "../../utils/sessionStorage";
 import { buttons } from "./buttons";
 
-export default function Home() {
+const Home: React.FC = (): React.JSX.Element => {
 	const fullName = "Tiago Ribeiro";
 	const [name, setName] = useState("");
 	const [showBtns, setShowBtns] = useState(getSessionStorage("showBtns") || false);
@@ -68,4 +68,6 @@ export default function Home() {
 			</div>
 		</div>
 	);
-}
+};
+
+export default Home;

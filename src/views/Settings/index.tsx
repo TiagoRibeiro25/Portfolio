@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import ViewHeader from "../../components/ViewHeader/ViewHeader";
+import ViewHeader from "../../components/ViewHeader";
 
-export default function Settings() {
+const Settings: React.FC = (): React.JSX.Element => {
 	const navigate = useNavigate();
 
 	useEffect(() => {
@@ -14,4 +14,6 @@ export default function Settings() {
 			<ViewHeader title="Settings" />
 		</div>
 	);
-}
+};
+
+export default Settings;

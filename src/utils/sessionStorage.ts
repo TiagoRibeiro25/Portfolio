@@ -6,7 +6,6 @@ export function getSessionStorage(key: string) {
 	return sessionStorage[key] ? JSON.parse(sessionStorage[key]!) : null;
 }
 
-/* eslint-disable */
 export function setSessionStorage(key: string, value: any) {
 	key = PRE_KEY + key;
 	sessionStorage[key] = JSON.stringify(value);

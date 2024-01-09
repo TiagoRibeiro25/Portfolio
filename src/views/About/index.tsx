@@ -1,12 +1,12 @@
 import { useState } from "react";
-import AboutIcon from "../../components/About/AboutIcon/AboutIcon";
-import Resume from "../../components/About/Resume/Resume";
-import Skills from "../../components/About/Skills/Skills";
-import WhoAmI from "../../components/About/WhoAmI/WhoAmI";
-import ViewHeader from "../../components/ViewHeader/ViewHeader";
+import ViewHeader from "../../components/ViewHeader";
 import { AboutOptions } from "../../types/types";
+import AboutIcon from "./components/AboutIcon";
+import Resume from "./components/Resume";
+import Skills from "./components/Skills";
+import WhoAmI from "./components/WhoAmI";
 
-export default function About() {
+const About: React.FC = (): React.JSX.Element => {
 	const [selected, setSelected] = useState<AboutOptions>("whoAmI");
 
 	return (
@@ -30,4 +30,6 @@ export default function About() {
 			</main>
 		</div>
 	);
-}
+};
+
+export default About;

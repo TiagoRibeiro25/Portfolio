@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { playMainButtonClickSound } from "../../../utils/playSound";
+import { playMainButtonClickSound } from "../../../../utils/playSound";
 import { downloadSvg, downloadedSvg, downloadingSvg } from "./icons";
 
 export default function Resume() {

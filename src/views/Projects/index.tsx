@@ -1,9 +1,9 @@
 import { useState } from "react";
-import ViewHeader from "../../components/ViewHeader/ViewHeader";
+import ViewHeader from "../../components/ViewHeader";
 import { playMainButtonClickSound, playSecondaryButtonClickSound } from "../../utils/playSound";
 import { projectsData } from "./projectsData";
 
-export default function Projects() {
+const Projects: React.FC = (): React.JSX.Element => {
 	const [selected, setSelected] = useState(projectsData[0]);
 
 	const updateSelected = (id: string) => {
@@ -101,4 +101,6 @@ export default function Projects() {
 			</main>
 		</div>
 	);
-}
+};
+
+export default Projects;

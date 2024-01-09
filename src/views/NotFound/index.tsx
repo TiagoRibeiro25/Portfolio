@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import { playMainButtonClickSound } from "../../utils/playSound";
 
-export default function NotFound() {
+const NotFound: React.FC = (): React.JSX.Element => {
 	return (
 		<div className="flex items-center justify-center h-screen">
 			<div className="container max-w-2xl p-1 mx-4 sm:mx-0 rounded-2xl bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 background-animate">
 				<div className="w-full h-full p-12 bg-gray-800 rounded-xl">
 					<header>
-						<h1 className="text-5xl font-black text-center text-transparent  animate-text bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 bg-clip-text">
+						<h1 className="text-5xl font-black text-center text-transparent animate-text bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 bg-clip-text">
 							Not Found 404
 						</h1>
 					</header>
@@ -31,4 +31,6 @@ export default function NotFound() {
 			</div>
 		</div>
 	);
-}
+};
+
+export default NotFound;

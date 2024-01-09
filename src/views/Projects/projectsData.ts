@@ -41,16 +41,6 @@ export const projectsData: Project[] = [
 	},
 	{
 		id: crypto.randomUUID(),
-		title: "My Portfolio",
-		description: "My personal portfolio website made with React and TypeScript.",
-		techStack: ["React", "Typescript", "Tailwindcss", "Vite"],
-		image: "./imgs/portfolio-pic.webp",
-		sourceCode: "https://github.com/TiagoRibeiro25/Portfolio",
-		liveDemo: "https://tiagoribeiro.tech/",
-	},
-
-	{
-		id: crypto.randomUUID(),
 		title: "Manage Quotes",
 		description:
 			"A simple web app made with React and TypeScript, with a Node.js (Express) backend. It allows you to create, edit, and delete quotes.",
@@ -78,5 +68,15 @@ export const projectsData: Project[] = [
 		image: "./imgs/jumper-pic.webp",
 		sourceCode: "https://github.com/xnm-sdksdk/jumper_CPM",
 		liveDemo: "https://jumper-cpm.netlify.app/",
+	},
+	{
+		id: crypto.randomUUID(),
+		title: "Junk King II",
+		description:
+			"A school project made with Three.js, where the theme was a 3D animation that had to be playable in a browser.",
+		techStack: ["A-Frame", "JavaScript", "HTML"],
+		image: "./imgs/junk-king-ii-pic.png",
+		sourceCode: "https://github.com/TiagoRibeiro25/Junk-King-II",
+		liveDemo: "https://junkkingii.netlify.app/",
 	},
 ];

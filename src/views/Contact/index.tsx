@@ -1,10 +1,10 @@
 import { useState } from "react";
-import LoadingIcon from "../../components/LoadingIcon/LoadingIcon";
-import ViewHeader from "../../components/ViewHeader/ViewHeader";
+import LoadingIcon from "../../components/LoadingIcon";
+import ViewHeader from "../../components/ViewHeader";
 import { playMainButtonClickSound } from "../../utils/playSound";
 import { sendEmail } from "../../utils/sendEmail";
 
-export default function Contact() {
+const Contact: React.FC = (): React.JSX.Element => {
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
 	const [sending, setSending] = useState(false);
@@ -84,4 +84,6 @@ export default function Contact() {
 			</main>
 		</div>
 	);
-}
+};
+
+export default Contact;

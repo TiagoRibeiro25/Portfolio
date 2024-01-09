@@ -36,7 +36,7 @@ export default function WhoAmI() {
 							</li>
 							<li>
 								<span className="font-bold">Hobbies:</span>{" "}
-								<span className="font-light">Gaming, Programming, Music</span>
+								<span className="font-light">Programming, Gaming</span>
 							</li>
 							<li>
 								<span className="font-bold">Languages:</span>{" "}

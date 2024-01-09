@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { clearSessionStorage } from "./utils/sessionStorage";
-import About from "./views/About/About";
-import Contact from "./views/Contact/Contact";
-import Home from "./views/Home/Home";
-import NotFound from "./views/NotFound/NotFound";
-import Projects from "./views/Projects/Projects";
-import Settings from "./views/Settings/Settings";
+import About from "./views/About";
+import Contact from "./views/Contact";
+import Home from "./views/Home";
+import NotFound from "./views/NotFound";
+import Projects from "./views/Projects";
+import Settings from "./views/Settings";
 
 import "./assets/styles/background.css";
 import "./assets/styles/blink.css";
@@ -14,7 +14,7 @@ import "./assets/styles/buttons.css";
 import "./assets/styles/custom-scroll.css";
 import "./assets/styles/index.css";
 
-function App() {
+const App: React.FC = (): React.JSX.Element => {
 	useEffect(() => {
 		window.addEventListener("beforeunload", () => {
 			clearSessionStorage();
@@ -35,6 +35,6 @@ function App() {
 			</Router>
 		</div>
 	);
-}
+};
 
 export default App;
