@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import ViewHeader from "../../components/ViewHeader";
 import { playMainButtonClickSound, playSecondaryButtonClickSound } from "../../utils/playSound";
 import { projectsData } from "./projectsData";
@@ -43,16 +44,16 @@ const Projects: React.FC = (): React.JSX.Element => {
 					</div>
 					<div className="p-1 mt-4 lg:w-3/4 lg:mx-4 rounded-2xl bg-gradient-to-r from-teal-500 via-blue-500 to-cyan-500 background-animate lg:mt-0">
 						<div className="w-full h-full p-4 bg-gray-800 rounded-xl">
-							<div className="flex flex-row w-full h-full">
-								<div className="hidden w-1/2 h-full sm:block">
-									<img
+							<div className="flex flex-col w-full h-full space-y-4 md:space-y-0 md:flex-row">
+								<div className="h-full md:w-1/2">
+									<LazyLoadImage
 										alt={selected.title}
 										className="object-cover w-full h-full rounded-xl"
 										loading="lazy"
 										src={selected.image}
 									/>
 								</div>
-								<div className="flex flex-col items-center ml-3 sm:w-1/2">
+								<div className="flex flex-col items-center ml-3 md:w-1/2">
 									<h2 className="text-2xl font-bold text-center">{selected.title}</h2>
 									<div className="flex flex-row flex-wrap justify-center mt-1 lg:mt-6">
 										{selected.techStack.map((tech) => {
@@ -89,7 +90,7 @@ const Projects: React.FC = (): React.JSX.Element => {
 												target="_blank"
 												onClick={playMainButtonClickSound}
 											>
-												Github
+												Source
 											</a>
 										</div>
 									</div>
