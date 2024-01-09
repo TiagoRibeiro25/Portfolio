@@ -22,7 +22,7 @@ const App: React.FC = (): React.JSX.Element => {
 	}, []);
 
 	return (
-		<div className="h-full min-h-screen bg-gradient-to-r from-gray-800 via-gray-900 to-gray-950 background-animate">
+		<div className="h-full min-h-screen overflow-y-auto bg-gradient-to-r from-gray-800 via-gray-900 to-gray-950 background-animate">
 			<Router>
 				<Routes>
 					<Route element={<Home />} path="/" />
