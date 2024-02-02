@@ -44,10 +44,7 @@ export default function WhoAmI() {
 							</li>
 							<li>
 								<span className="font-bold">Interests:</span>{" "}
-								<span className="font-light">Web Development, Mobile Development</span>
-							</li>
-							<li>
-								<span className="font-bold">Extra:</span> <span className="font-light">I use Arch btw</span>
+								<span className="font-light">Software Development</span>
 							</li>
 						</ul>
 					</div>
